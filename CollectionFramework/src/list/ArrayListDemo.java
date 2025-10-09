@@ -33,7 +33,18 @@ public class ArrayListDemo {
 		System.out.println(a2);
 		
 		System.out.println(a1.getClass().getName());
-
+		
+		//iterating a3 elements
+		System.out.println(a3);
+		//using for loop:
+		for(int i=0; i<a3.size();i++) {
+			System.out.println(a3.get(i));
+		}
+		System.out.println();
+		//using for each:
+		for(Integer x : a3) {
+			System.out.println(x);
+		}
 		
 		//Disadvantage-
 		//when we insert or remove an element at the start or middle, 
