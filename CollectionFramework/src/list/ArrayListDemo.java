@@ -56,6 +56,7 @@ public class ArrayListDemo {
 		//Use ArrayList when → you need fast random access and
 		//most operations are read-heavy.
 		
+//******************************************************************************************
 		
 		//ArrayList and Iterator by abdulBari
 		
@@ -103,6 +104,14 @@ public class ArrayListDemo {
 			System.out.println(lit.next());
 		}
 		
+		System.out.println();
+		System.out.println("Using Spliterator");
+		//3.using SplIterator in for loop
+		Spliterator<Integer> sp = al1.spliterator();
+		System.out.println("Using tryAdvance:");
+		while (sp.tryAdvance(x -> System.out.println(x)));
+		System.out.println("Using forEachRemaining:");
+		al1.spliterator().forEachRemaining(System.out::println);
 		
 		System.out.println();
 		System.out.println("Using for each in lambda exp");
