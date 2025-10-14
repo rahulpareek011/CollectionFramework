@@ -26,7 +26,35 @@ public class HashMapDemo {
 		//System.out.println(e);
 		//Internally
 		//System.out.println(e.getKey() + "=" + e.getValue());//Key-Value Pair-> Entry Interface 
-
+		
+		System.out.println();
+		System.out.println("Internal working");
+		
+		//Internal Working of hashMap Step-by-Step (for interview)
+		HashMap<String, Double> employees = new HashMap<>();
+		employees.put("Vikram", 800.0);
+		employees.put("Nabeel", 900.0);
+		employees.put("Vikram", 1000.0);
+		//step 1:
+		//From the entry ("Vikram", 800), extract the key "Vikram".
+		
+		//step 2:
+		//HashMap calls the hashCode() method of the key:
+		
+		//step 3:
+		//Internally, HashMap divides hashcode using the hashing function:
+		//hashing function: h(x) = x%10;
+		
+		//step 4
+		//A new entry (Node) object is created:
+//		key = "Vikram"
+//		value = 800
+//		hashcode = 128281
+//		next = null
+		
+		//This node is stored in bucket 1.
+		//If bucket 1 was empty → directly stored.
+		//If not → it is linked using a LinkedList.
 	}
 
 }
