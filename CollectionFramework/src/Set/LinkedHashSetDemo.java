@@ -13,7 +13,7 @@ public class LinkedHashSetDemo {
 		lhs.add("D");
 		lhs.add(null);
 		lhs.add(null);//allow one null
-		lhs.add("D");
+		lhs.add("D");//duplicate not allowed
 		System.out.println(lhs);
 	}
 
